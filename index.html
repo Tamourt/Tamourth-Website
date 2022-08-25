@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamourth</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function(){
+         emailjs.init("bRY3HFSLaix4vTFus");
+     })();
+    </script>
+</head>
+<body>
+    <section id="landing-page" onmousemove="moveBackground(event)">
+        <nav>
+            <figure>
+                <img id="personal-logo" src="./assets/goldnobg.png" alt="">
+            </figure>
+            <ul class="nav__link--list">
+                <li class="nav__link" onclick="toggleModal()">
+                    <a href="#" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black
+                    ">About</a>
+                </li>
+                <li class="nav__link">
+                    <a href="#products" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black
+                    ">Products</a>
+                </li>
+                <li class="nav__link" onclick="toggleModal()">
+                    <a href="#" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black
+                    ">Contact</a>
+                </li>
+                <li class="nav__link click" onclick="toggleContrast()">
+                    <a href="#" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black
+                    "><i class="fas fa-adjust"></i></a>
+                </li>
+            </ul>
+        </nav>
+        <header class="header">
+            <div class="header__content">
+                <h1 class="title"></h1>
+                <h1 class="title orange">Tamourth.</h1>
+                <p class="header__para">
+                    I'm a <b class="orange">Frontend Software Engineer</b> with a strong passion for building web applications with great user
+                    experiences.
+                    <br>
+                    Here's a bit more <b class="orange click" onclick="toggleModal()">about me.</b>
+                </p>
+                <div class="social__list">
+                    <a href="https://www.instagram.com/tamourthuk/" target="_blank" class="social__link click">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.amazon.co.uk/" target="_blank" class="social__link click">
+                        <i class="fab fa-amazon"></i>
+                    </a> 
+                </div>
+            </div>
+        </header>
+        <a href="#">
+            <button class="mail__btn click" onclick="toggleModal()">
+                <i class="fas fa-envelope"></i>
+            </button>
+        </a>
+        <a href="#products" class="scroll">
+            <div class="scroll__icon click"></div>
+        </a>
+        <div class="modal">
+            <div class="modal__half modal__about">
+                <h3 class="modal__title modal__title--about">Here's a bit about us.</h3>
+                <h4 class="modal__sub-title modal__sub-title--about ">Tamourth</h4>
+                <p class="modal__para">
+                    A <b class="orange">new small</b> business with open minds and large plans for expansion
+                    <br>
+                    Here at Tamourth we provide <b class="orange">premium, modern</b> coffee gadgets and kitchen appliances
+                </p>
+                <div class="modal__languages">
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./assets/instagramlogo.png" alt="">
+                        <span class="language__name">Instagram</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./assets/instagramlogo.png" alt="">
+                        <span class="language__name">Instagram</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./assets/instagramlogo.png" alt="">
+                        <span class="language__name">Instagram</span>
+                    </figure>
+                </div>
+            </div>
+            <div class="modal__half modal__contact">
+                <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+                <h3 class="modal__title modal__title--contact">
+                    Contact Us!
+                </h3>
+                <h3 class="modal__sub-title modal__sub-title--contact">
+                    We'd love to hear your feedback.
+                </h3>
+                <form id="contact__form" onsubmit="contact(event)">
+                    <div class="form__item">
+                        <label class="form__item--label">Name</label>
+                        <input class="input" name="user_name" type="text" ></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Email</label>
+                        <input class="input" name="user_email" type="email" ></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Message</label>
+                        <textarea class="input" name="message" type="text" ></textarea>
+                    </div>
+                    <button id="contact__submit" class="form__submit">
+                        Send it our way
+                    </button>
+                </form>
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fas fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                    Thanks for your feedback!
+                </div>
+            </div>
+        </div>
+        <img src="./assets/semi circle.svg"  class="shape shape--0">
+        <img src="./assets/circle.svg"  class="shape shape--1">
+        <img src="./assets/squiggly.svg"  class="shape shape--2">
+        <img src="./assets/circle.svg"  class="shape shape--3">
+        <img src="./assets/triangle.svg"  class="shape shape--4">
+        <img src="./assets/circle.svg"  class="shape shape--5">
+        <img src="./assets/squiggly.svg"  class="shape shape--6">
+        <img src="./assets/circle.svg"  class="shape shape--7">
+        <img src="./assets/semi circle.svg"  class="shape shape--8">  
+    </section>
+    <section id="products">
+        <div class="container">
+            <div class="row">
+                <h1 class="section__title">
+                    Here are some of our <span class="orange">products</span>
+                </h1>
+                <ul class="product__list">
+                    <li class="product">
+                        <div class="product__wrapper">
+                            <img src="./assets/blinker mockup.png" class="product__img" alt="">
+                            <div class="product__wrapper--bg"></div>
+                            <div class="product__description">
+                                <h3 class="product__description--title">
+                                    Template
+                                </h3>
+                                <h4 class="product__description--sub-title">
+                                    Html, CSS, JavaScript, Vue, Vuex
+                                </h4>
+                                <p class="product__description--para">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio culpa, possimus vel ratione 
+                                    vero autem aspernatur minima libero ex fuga quod illo dolor voluptatibus dolorem atque exercitationem. 
+                                    Perspiciatis, inventore odit!
+                                </p>
+                                <div class="product__description--links">
+                                    <a href="#" class="product__description--link">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="#" class="product__description--link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row footer__row">
+                <figure>
+                    <img class="footer__logo--img" src="./assets/coffeelogo.png" alt="">
+                </figure>
+                <div class="footer__social--list">
+                    <a href="#" class="
+                    footer__social--link 
+                    link__hover-effect
+                    link__hover-effect--white
+                    ">
+                    Instagram
+                    </a>
+                    <a href="#" class="
+                    footer__social--link 
+                    link__hover-effect
+                    link__hover-effect--white
+                    ">
+                    Amazon
+                    </a>
+                    <a href="#" class="
+                    footer__social--link 
+                    link__hover-effect
+                    link__hover-effect--white
+                    " onclick="toggleModal()">
+                    Contact
+                    </a>
+                </div>
+                <div class="footer__copyright">Copyright © 2022 TAMOURTH </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
