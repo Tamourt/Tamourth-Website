@@ -417,7 +417,7 @@ nav {
 }
 
 .form__submit {
-    background: linear-gradient(#8b8a8a, #b1b0b0, #8b8a8a);
+    background: #e0bd97;
     border: 2px solid #242424;
     color: white;
     font-weight: 700;
