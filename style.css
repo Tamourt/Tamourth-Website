@@ -651,6 +651,7 @@ footer {
 .shape--3 {
     top: 50vh;
     left: 5vw;
+    visibility: hidden;
 }
 .shape--4 {
     top: 50vh;
@@ -692,6 +693,9 @@ footer {
     .modal__half {
         width: 100%;
     }
+    .shape {
+        visibility: hidden;
+    }
 }
 
 @media (max-width: 480px) {
@@ -718,5 +722,8 @@ footer {
     }
     .modal__half {
         padding: 40px;
+    }
+    .shape {
+        visibility: hidden;
     }
 }
