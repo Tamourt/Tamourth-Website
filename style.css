@@ -433,9 +433,7 @@ nav {
 }
 
 .form__submit:active {
-    background: linear-gradient(#6d6c6c, #b1b0b0, #6d6c6c);
-    -webkit-background-clip: text;
-    color:transparent;
+    color: #e0bd97;
     border-color: #b1b0b0;
 }
 
